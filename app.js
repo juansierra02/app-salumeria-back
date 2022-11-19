@@ -20,6 +20,7 @@ try {
     console.log(`El error de conexión es: ${error}`);
 }
 
-app.listen(8000, () => {
-    console.log(`Servidor funcionando en http://localhost:8000/`);
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor funcionando en http://localhost:${PORT}/`);
+});
